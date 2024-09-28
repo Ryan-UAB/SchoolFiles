@@ -1,0 +1,80 @@
+#include "deque.h"
+#include <iostream>
+
+Deque::Element::Element(int cVal, Element *cElementT, Element *cElementB){
+  val = cVal;
+  nextElement = cElementT;
+  lastElement = cElementB;
+}
+
+Deque::Deque(){
+  topOfStack = nullptr;
+  bottomOfStack = nullptr;
+}
+
+Deque::Element *Deque::getTopOfStack() {return topOfStack;}
+
+void Deque::setTopOfStack(Element *e) {topOfStack = e;)
+
+Deque::Element *Deque::getBottomOfStack() {return bottomOfStack;}
+
+void Deque::setBottomOfStack(Element *e) {bottomOfStack = e;}
+
+void Deque::push_front(int i) {
+  Element *newElement = new Element(i, topOfStack, bottomOfStack);
+  setTopOfStack(newElement);
+}
+
+void Deque::push_back(int i) {
+  Element *newElement = new Element(i, topOfStack, bottomOfStack);
+  setBottomOfStack(newElement);
+}
+
+int Deque::pop_front(){
+  if(topOfStack != nullptr){
+    int val = topOfStack -> val;
+    Element *ptrNewTop = topOfStack -> nextElement;
+    delete topOfStack;
+    setTopOfStack(ptrNewTop);
+    return val;
+  }
+  std::cout << "Error: Popping empty queue\n";
+  return 0;
+}
+
+int Deque::pop_back(){
+  if(bottomOfStack != nullptr){
+    int val = bottomOfStack -> val;
+    Element *ptrNewBottom = bottomOfStack -> lastElement;
+    delete bottomOfStackBottom;
+    setBottomOfStack(ptrNewBottom);
+    return val;
+  }
+  std::cout << "Error: Popping empty queue\n";
+  return 0;
+}
+
+int Deque::peak_front(){
+  if(topOfStack != nullptr){
+    return topOfStack -> val;
+  }
+  std::cout << "Error: Peaking empty queue\n";
+  return 0;
+}
+
+int Deque::peak_back(){
+  if(bottomOfStack != nullptr){
+    return bottomOfStack -> val;
+  }
+  std::cout << "Error: Peaking empty queue\n";
+  return 0;
+}
+
+void Deque::remove_all(){
+  while(getTopOfStack() != nullptr){
+    int temp = pop_front();
+  }
+}
+
+
+Deque::~Deque() {remove_all();}

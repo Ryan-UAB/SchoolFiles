@@ -1,0 +1,21 @@
+#ifndef user_h
+#define user_h
+#include <vector>
+#include <string>
+
+class User{
+  std::string userName;
+  std::string email;
+  std::vector<User *> friendList;
+
+  void setUserName(std::string username);
+  std::string getUserName();
+  void setEmail(std::string email);
+  std::string getEmail();
+  void addFriend();
+  void removeFriend();
+  int numFriends();
+  int getFriendAt();
+};
+
+#endif
