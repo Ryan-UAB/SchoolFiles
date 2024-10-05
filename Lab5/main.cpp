@@ -1,4 +1,4 @@
-#include "screenSaver.h"
+#include "screensaver.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <vector>

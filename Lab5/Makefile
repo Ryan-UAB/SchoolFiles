@@ -1,15 +1,8 @@
-#SOURCES = main.cpp player.cpp 
-OBJECTS = main.o screenSaver.o
-EXECUTABLE = screenSaver
+saver:
+	g++ -std=c++11 main.cpp screensaver.cpp -I/usr/local/Cellar/sfml/2.6.1/include -L/usr/local/Cellar/sfml/2.6.1/lib -lsfml-graphics -lsfml-window -lsfml-system -o saver
 
-run : $(EXECUTABLE) 
-	./$(EXECUTABLE)
-
-$(EXECUTABLE): $(OBJECTS)
-	g++ -o $(EXECUTABLE) $(OBJECTS) -lsfml-graphics -lsfml-window -lsfml-system
-
-%.o : %.cpp %.h
-	g++ -c $<
+run:
+	./saver
 
 clean:
-	rm *.o $(EXECUTABLE)
+	rm -f *.o saver

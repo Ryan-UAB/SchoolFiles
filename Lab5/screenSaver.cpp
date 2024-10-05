@@ -1,4 +1,4 @@
-#include "screenSaver.h"
+#include "screensaver.h"
 #include <SFML/Graphics/CircleShape.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/System/Vector2.hpp>
@@ -64,3 +64,46 @@ void ScreenSaver::checkWallCollision(int screenWidth, int screenHeight){
 
 
 //TODO Define all necessary member functions for ClassicSaver, ColorChangingSaver, and CustomSaver Here
+ClassicSaver::ClassicSaver(){}
+ClassicSaver::ClassicSaver(float radius, sf::Vector2f cVelocity, sf::Color color){ 
+  getShape() = sf::CircleShape(radius);
+  velocity = cVelocity;
+  getShape().setFillColor(color);
+}
+
+void ClassicSaver::update(float deltaTime, int screenWidth, int screenHeight){
+  getShape().move(velocity.x * deltaTime, velocity.y * deltaTime);
+  checkWallCollision(screenWidth, screenHeight);
+}
+
+ColorChangingSaver::ColorChangingSaver(float radius, sf::Vector2f cVelocity, float cColorSpeed){
+  getShape() = sf::CircleShape(radius);
+  velocity = cVelocity;
+  getShape().setFillColor(sf::Color(0, 127, 255, 255));
+  colorSpeed = cColorSpeed;
+}
+
+void ColorChangingSaver::update(float deltaTime, int screenWidth, int screenHeight){
+  sf::Color current = getShape().getFillColor();
+  getShape().move(velocity.x * deltaTime, velocity.y * deltaTime);
+  checkWallCollision(screenWidth, screenHeight);
+  getShape().setFillColor(current + sf::Color(10 * colorSpeed, 5 * colorSpeed, 3 * colorSpeed, 0));
+  if(current.r == 255){getShape().setFillColor(current - sf::Color(255, 0, 0, 0));}
+  if(current.b == 255){getShape().setFillColor(current - sf::Color(0, 0, 255, 0));}
+  if(current.g == 255){getShape().setFillColor(current - sf::Color(0, 255, 0, 0));}
+}
+
+CustomSaver::CustomSaver(float someFloat, sf::Vector2f someVector, float someOtherFloat){
+  getShape() = sf::CircleShape(someFloat);
+  velocity = someVector;
+  rotation = someOtherFloat;
+  getShape().setFillColor(sf::Color::Cyan);
+  getShape().setOrigin(100, 100);
+  getShape().setPosition(300 * velocity.x, 400 * velocity.y);
+}
+
+void CustomSaver::update(float deltaTime, int screenWidth, int screenHeight){
+  getShape().rotate(rotation * deltaTime);
+  checkWallCollision(screenWidth, screenHeight);
+}
+
