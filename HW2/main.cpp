@@ -75,7 +75,7 @@ int main(){
       std::cin.ignore();
       switch(input){
       case 1:
-	context.setStrategy(typesearch);
+	context.setStrategy(&typesearch);
 	std::cout << "What type of event are you searching for?\n" << "1. Concerts\n" << "2. Conferences\n";
 	std::cin >> input;
 	itype = std::to_string(input);
@@ -86,7 +86,7 @@ int main(){
 	searched.clear();
 	break;
       case 2:
-	context.setStrategy(datesearch);
+	context.setStrategy(&datesearch);
 	std::cout << "Please input the date you are searching for. Format: January 1 = 0101, October 29 = 1029\n";
 	std::cin >> idate;
 	itype = std::to_string(idate);
@@ -97,8 +97,8 @@ int main(){
 	searched.clear();
 	break;	  
       case 3:
-	context.setStrategy(locationsearch);
-	std::cout << "Please input the location of an event.";
+	context.setStrategy(&locationsearch);
+	std::cout << "Please input the location of an event.\n";
 	std::getline(std::cin, ilocation);
 	searched = context.executeStrategy(events, ilocation);
 	for(int i = 0; i < searched.size(); i++){
@@ -122,7 +122,14 @@ int main(){
       }
       break;
     case 4:
-      std::cout << "N/A\n";
+      std::cout << "Please put in today's date. Format: January 1 = 0101, October 29 = 1029\n";
+      std::cin >> idate;
+      std::cin.ignore();
+      for(int i = 0; i < events.size(); i++){
+	if(events[i]->eventDate >= idate && events[i]->eventDate <= (idate+100)%1231){
+	  std::cout << events[i]->getDetails();
+	}
+      }
       break;
     case 5:
       std::cout << "Exiting\n";

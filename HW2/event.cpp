@@ -21,6 +21,7 @@ Concert::Concert(std::string cEventName, int cEventDate, std::string cEventLocat
   eventLocation = cEventLocation;
   bandName = cBandName;
   genre = cGenre;
+  eventtype = 1;
 }
 
 Conference::Conference(std::string cEventName, int cEventDate, std::string cEventLocation, std::string cSpeaker, std::string cTopic){
@@ -29,6 +30,7 @@ Conference::Conference(std::string cEventName, int cEventDate, std::string cEven
   eventLocation = cEventLocation;
   speaker = cSpeaker;
   topic = cTopic;
+  eventtype = 2;
 }
 
 Event* ConcertFactory::createEvent(std::string cEventName, int cEventDate, std::string cEventLocation, std::string cBandName, std::string cGenre) {return new Concert(cEventName, cEventDate, cEventLocation, cBandName, cGenre);}
@@ -50,13 +52,13 @@ std::string Event::getDetails(){
 
 std::string Concert::getDetails(){
    std::string details;
-   details += "Come see the " + genre + " band " + bandName + " at " + eventName + " on " + findDate(eventDate) + " at the " + eventLocation;
+   details += "Come see the " + genre + " band " + bandName + " at " + eventName + " on " + findDate(eventDate) + " at " + eventLocation;
   return details;
 }
 
 std::string Conference::getDetails(){
    std::string details;
-   details += "Come listen to " + speaker + " talk about " + topic + " at " + eventName + " on " + findDate(eventDate) + " at the " + eventLocation;
+   details += "Come listen to " + speaker + " talk about " + topic + " at " + eventName + " on " + findDate(eventDate) + " at " + eventLocation;
   return details;
 }
 
@@ -83,7 +85,7 @@ std::vector<Event*> DateSearching::searchEvent(std::vector<Event*> vec, std::str
 std::vector<Event*> LocationSearching::searchEvent(std::vector<Event*> vec, std::string location){
   std::vector<Event*> locationlist;
   for(int i = 0; i < vec.size(); i++){
-    if(vec[i]->eventtype == location){
+    if(vec[i]->eventLocation == location){
       locationlist.push_back(vec[i]);
     }
   }
@@ -94,6 +96,8 @@ void SearchContext::setStrategy(SearchingStrategy* strategy){
   this->strategy = strategy;
 }
 
-void SearchContext::executeStrategy(std::vector<Event*> vec, std::string searchstrategy){
-  strategy->searchEvent(vec, searchstrategy);
+std::vector<Event*> SearchContext::executeStrategy(std::vector<Event*> vec, std::string searchstrategy){
+  std::vector<Event*> searched;
+  searched = strategy->searchEvent(vec, searchstrategy);
+  return searched;
 }

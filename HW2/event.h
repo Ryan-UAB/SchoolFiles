@@ -9,6 +9,7 @@ class Event{
   std::string eventName;
   int eventDate;
   std::string eventLocation;
+  int eventtype;
   Event();
   Event(std::string cEventName, int cEventDate, std::string cEventLocation);
   virtual std::string getDetails() = 0;
@@ -17,7 +18,7 @@ class Event{
 
 class Concert : public Event{
  public:
-  int eventtype = 1;
+  int eventtype;
   std::string bandName;
   std::string genre;
   Concert();
@@ -27,7 +28,7 @@ class Concert : public Event{
 
 class Conference : public Event{
  public:
-  int eventtype = 2;
+  int eventtype;
   std::string speaker;
   std::string topic;
   Conference();
@@ -77,7 +78,7 @@ class SearchContext{
  public:
   SearchingStrategy* strategy;
   void setStrategy(SearchingStrategy* strategy);
-  void executeStrategy(std::vector<Event*> vec, std::string searchstrategy);
+  std::vector<Event*> executeStrategy(std::vector<Event*> vec, std::string searchstrategy);
 };
 
 
