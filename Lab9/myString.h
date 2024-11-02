@@ -6,19 +6,20 @@
 #include <iostream>
 
 class myString{
- private:
-  char* mystring;
-
  public:
+  char* mystr;
+
+  friend std::ostream& operator<<(std::ostream& os, const myString& obj);
+
   myString(std::string input);
 
   std::string toString();
 
   int length();
 
-  int substr(start, n);
+  char* substr(int start, int n);
 
-  ~myString() {delete mystring;}
+  ~myString() {delete mystr;}
 };
 
 #endif
