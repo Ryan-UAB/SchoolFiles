@@ -1,0 +1,16 @@
+#ifndef myString_h
+#define myString_h
+
+#include <string>
+
+class myString{
+  /*
+ private:
+  char mystring[];
+  */
+
+ public:
+  myString(std::string input);
+};
+
+#endif

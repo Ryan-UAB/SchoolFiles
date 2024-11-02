@@ -1,0 +1,9 @@
+#include "myString.h"
+#include <iostream>
+
+int main(){
+  char temp[] = "Hello World.";
+  myString(temp);
+  
+  return 0;
+}
