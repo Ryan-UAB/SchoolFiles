@@ -1,6 +1,4 @@
 #include <string>
-#include <cmath>
-#include <vector>
 #include <iostream>
 
 std::string HW3_01(std::string first, std::string second){
@@ -8,6 +6,7 @@ std::string HW3_01(std::string first, std::string second){
   for(int i = 0; i < first.size(); i++){
     for(int j = 0; j < second.size(); j++){
       if(first[i] == second[j]){
+	second.erase(j, 1);
 	sub += first[i];
 	break;
       }
@@ -31,8 +30,10 @@ std::string HW3_02(int num){
   return "no power of 2";
 }
 
+/*
 int main(){
-  std::cout << HW3_01("the", "street") << "\n";
-  std::cout << HW3_02(1) << "\n";
+  std::cout << HW3_01("beetles", "eatery") << "\n";
+  std::cout << HW3_02(16) << "\n";
   return 0;
 }
+*/
