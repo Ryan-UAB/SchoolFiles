@@ -2,7 +2,7 @@
 \hypertarget{class_vigenere}{}\label{class_vigenere}\index{Vigenere@{Vigenere}}
 
 
-Class that uses a vigenere cipher to both encrypt and decrypt given messages using a set key.  
+A vigenere cipher that both encrypts and decrypts using a set key.  
 
 
 
@@ -25,7 +25,9 @@ void \mbox{\hyperlink{class_vigenere_a56fc304a543d347924432c61bc9780a1}{set\+Key
 
 
 \doxysubsection{Detailed Description}
-Class that uses a vigenere cipher to both encrypt and decrypt given messages using a set key. 
+A vigenere cipher that both encrypts and decrypts using a set key. 
+
+This class takes a key in its constructor that it will use to encrypt and decrypt messages. It can also change its key later using the set\+Key command. It can also tell if a pair of messages are the same message after being encrypted/decrypted using a vigenere cipher with the current key. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_vigenere_aa47ebd6550a2022e244278891cd57e47}\index{Vigenere@{Vigenere}!Vigenere@{Vigenere}}
@@ -38,7 +40,7 @@ Vigenere\+::\+Vigenere (\begin{DoxyParamCaption}\item[{std\+::string}]{key}{}\en
 
 Constructor that sets the current vigenere key. 
 
-
+This constructor takes a std\+::string that will be used as the current key for both the encryption and decryption of messages using a vigenere cipher. 
 \begin{DoxyParams}{Parameters}
 {\em key} & a std\+::string that becomes the current key to be used by the cipher \\
 \hline
@@ -56,7 +58,7 @@ std\+::string Vigenere\+::decrypt (\begin{DoxyParamCaption}\item[{std\+::string}
 
 Returns a given message decrypted by a vigenere cipher using the current key. 
 
-
+This function will return a decrypted version of the initial message after being decrypted by the vigenere cipher using the currently set key. 
 \begin{DoxyParams}{Parameters}
 {\em msg} & a std\+::string that will be decrypted using a vigenere cipher \\
 \hline
@@ -74,7 +76,7 @@ std\+::string Vigenere\+::encrypt (\begin{DoxyParamCaption}\item[{std\+::string}
 
 Returns a given message encrypted by a vigenere cipher using the current key. 
 
-
+This function will return an encrypted version of the initial message after being encrypted by the vigenere cipher using the currently set key. 
 \begin{DoxyParams}{Parameters}
 {\em msg} & a std\+::string that will be encrypted using a vigenere cipher \\
 \hline
@@ -92,7 +94,7 @@ bool Vigenere\+::is\+Encrypted (\begin{DoxyParamCaption}\item[{std\+::string}]{e
 
 Returns a bool that checks if a given encrypted message and decrypted message are the same message after encryption/decryption. 
 
-
+This function takes in two different std\+::string messages, one already encrypted and one already decrypted/unencrypted, to determine if the two messages are in fact the same message after being encrypted/decrypted by the vigenere cipher using the current key. 
 \begin{DoxyParams}{Parameters}
 {\em encrypted\+Msg} & a message that has already been encrypted using a vigenere cipher by a key \\
 \hline
@@ -112,7 +114,7 @@ void Vigenere\+::set\+Key (\begin{DoxyParamCaption}\item[{std\+::string}]{key}{}
 
 Changes the current key used by the vigenere encryption and decryption. 
 
-
+This function takes a std\+::string that will replace the current key and be used for the encryption and decryption going forward. 
 \begin{DoxyParams}{Parameters}
 {\em key} & a new key to be replace the currently set key \\
 \hline

@@ -92,7 +92,7 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 
-<p>Class that uses a vigenere cipher to both encrypt and decrypt given messages using a set key.  
+<p>A vigenere cipher that both encrypts and decrypts using a set key.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="vigenere_8h_source.html">vigenere.h</a>&gt;</code></p>
@@ -116,7 +116,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a56fc304a543d347924432c61bc9780a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class that uses a vigenere cipher to both encrypt and decrypt given messages using a set key. </p>
+<div class="textblock"><p>A vigenere cipher that both encrypts and decrypts using a set key. </p>
+<p>This class takes a key in its constructor that it will use to encrypt and decrypt messages. It can also change its key later using the setKey command. It can also tell if a pair of messages are the same message after being encrypted/decrypted using a vigenere cipher with the current key. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa47ebd6550a2022e244278891cd57e47" name="aa47ebd6550a2022e244278891cd57e47"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa47ebd6550a2022e244278891cd57e47">&#9670;&#160;</a></span>Vigenere()</h2>
@@ -134,7 +135,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructor that sets the current vigenere key. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>This constructor takes a std::string that will be used as the current key for both the encryption and decryption of messages using a vigenere cipher. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>a std::string that becomes the current key to be used by the cipher </td></tr>
   </table>
@@ -160,7 +161,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a given message decrypted by a vigenere cipher using the current key. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>This function will return a decrypted version of the initial message after being decrypted by the vigenere cipher using the currently set key. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">msg</td><td>a std::string that will be decrypted using a vigenere cipher </td></tr>
   </table>
@@ -186,7 +187,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a given message encrypted by a vigenere cipher using the current key. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>This function will return an encrypted version of the initial message after being encrypted by the vigenere cipher using the currently set key. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">msg</td><td>a std::string that will be encrypted using a vigenere cipher </td></tr>
   </table>
@@ -216,7 +217,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a bool that checks if a given encrypted message and decrypted message are the same message after encryption/decryption. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>This function takes in two different std::string messages, one already encrypted and one already decrypted/unencrypted, to determine if the two messages are in fact the same message after being encrypted/decrypted by the vigenere cipher using the current key. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">encryptedMsg</td><td>a message that has already been encrypted using a vigenere cipher by a key </td></tr>
     <tr><td class="paramname">decryptedMessage</td><td>a message that has already been decrypted using a vigenere cipher by a key/is the unencrypted message </td></tr>
@@ -243,7 +244,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Changes the current key used by the vigenere encryption and decryption. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>This function takes a std::string that will replace the current key and be used for the encryption and decryption going forward. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>a new key to be replace the currently set key </td></tr>
   </table>

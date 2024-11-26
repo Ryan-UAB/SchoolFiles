@@ -89,25 +89,26 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="foldopen" id="foldopen00003" data-start="{" data-end="};">
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="class_vigenere.html">    3</a></span><span class="keyword">class </span><a class="code hl_class" href="class_vigenere.html">Vigenere</a>{</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>  std::string vigkey;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <a class="code hl_function" href="class_vigenere.html#aa47ebd6550a2022e244278891cd57e47">Vigenere</a>(std::string key);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  std::string <a class="code hl_function" href="class_vigenere.html#af4c61150d58a7cf06c3e32e861f3f10f">encrypt</a>(std::string msg);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  std::string <a class="code hl_function" href="class_vigenere.html#a7b87aaf211ce478d05e262928db65cfc">decrypt</a>(std::string msg);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_vigenere.html#a25f202a6e81315673ac4d75e3bf44b79">isEncrypted</a>(std::string encryptedMsg, std::string decryptedMessage);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_vigenere.html#a56fc304a543d347924432c61bc9780a1">setKey</a>(std::string key);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <a class="code hl_class" href="class_vigenere.html">~Vigenere</a>() {};</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>};</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_vigenere.html">    5</a></span><span class="keyword">class </span><a class="code hl_class" href="class_vigenere.html">Vigenere</a>{</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>  std::string vigkey;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <a class="code hl_function" href="class_vigenere.html#aa47ebd6550a2022e244278891cd57e47">Vigenere</a>(std::string key);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  std::string <a class="code hl_function" href="class_vigenere.html#af4c61150d58a7cf06c3e32e861f3f10f">encrypt</a>(std::string msg);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  std::string <a class="code hl_function" href="class_vigenere.html#a7b87aaf211ce478d05e262928db65cfc">decrypt</a>(std::string msg);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_vigenere.html#a25f202a6e81315673ac4d75e3bf44b79">isEncrypted</a>(std::string encryptedMsg, std::string decryptedMessage);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_vigenere.html#a56fc304a543d347924432c61bc9780a1">setKey</a>(std::string key);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_class" href="class_vigenere.html">~Vigenere</a>() {};</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
 </div>
-<div class="ttc" id="aclass_vigenere_html"><div class="ttname"><a href="class_vigenere.html">Vigenere</a></div><div class="ttdoc">Class that uses a vigenere cipher to both encrypt and decrypt given messages using a set key.</div><div class="ttdef"><b>Definition</b> vigenere.h:3</div></div>
+<div class="ttc" id="aclass_vigenere_html"><div class="ttname"><a href="class_vigenere.html">Vigenere</a></div><div class="ttdoc">A vigenere cipher that both encrypts and decrypts using a set key.</div><div class="ttdef"><b>Definition</b> vigenere.h:5</div></div>
 <div class="ttc" id="aclass_vigenere_html_a25f202a6e81315673ac4d75e3bf44b79"><div class="ttname"><a href="class_vigenere.html#a25f202a6e81315673ac4d75e3bf44b79">Vigenere::isEncrypted</a></div><div class="ttdeci">bool isEncrypted(std::string encryptedMsg, std::string decryptedMessage)</div><div class="ttdoc">Returns a bool that checks if a given encrypted message and decrypted message are the same message af...</div><div class="ttdef"><b>Definition</b> vigenere.cpp:46</div></div>
 <div class="ttc" id="aclass_vigenere_html_a56fc304a543d347924432c61bc9780a1"><div class="ttname"><a href="class_vigenere.html#a56fc304a543d347924432c61bc9780a1">Vigenere::setKey</a></div><div class="ttdeci">void setKey(std::string key)</div><div class="ttdoc">Changes the current key used by the vigenere encryption and decryption.</div><div class="ttdef"><b>Definition</b> vigenere.cpp:51</div></div>
 <div class="ttc" id="aclass_vigenere_html_a7b87aaf211ce478d05e262928db65cfc"><div class="ttname"><a href="class_vigenere.html#a7b87aaf211ce478d05e262928db65cfc">Vigenere::decrypt</a></div><div class="ttdeci">std::string decrypt(std::string msg)</div><div class="ttdoc">Returns a given message decrypted by a vigenere cipher using the current key.</div><div class="ttdef"><b>Definition</b> vigenere.cpp:28</div></div>
