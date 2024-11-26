@@ -1,0 +1,125 @@
+\doxysection{Vigenere Class Reference}
+\hypertarget{class_vigenere}{}\label{class_vigenere}\index{Vigenere@{Vigenere}}
+
+
+Class that uses a vigenere cipher to both encrypt and decrypt given messages using a set key.  
+
+
+
+
+{\ttfamily \#include $<$vigenere.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vigenere_aa47ebd6550a2022e244278891cd57e47}{Vigenere}} (std\+::string key)
+\begin{DoxyCompactList}\small\item\em Constructor that sets the current vigenere key. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_vigenere_af4c61150d58a7cf06c3e32e861f3f10f}{encrypt}} (std\+::string msg)
+\begin{DoxyCompactList}\small\item\em Returns a given message encrypted by a vigenere cipher using the current key. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_vigenere_a7b87aaf211ce478d05e262928db65cfc}{decrypt}} (std\+::string msg)
+\begin{DoxyCompactList}\small\item\em Returns a given message decrypted by a vigenere cipher using the current key. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_vigenere_a25f202a6e81315673ac4d75e3bf44b79}{is\+Encrypted}} (std\+::string encrypted\+Msg, std\+::string decrypted\+Message)
+\begin{DoxyCompactList}\small\item\em Returns a bool that checks if a given encrypted message and decrypted message are the same message after encryption/decryption. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vigenere_a56fc304a543d347924432c61bc9780a1}{set\+Key}} (std\+::string key)
+\begin{DoxyCompactList}\small\item\em Changes the current key used by the vigenere encryption and decryption. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that uses a vigenere cipher to both encrypt and decrypt given messages using a set key. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vigenere_aa47ebd6550a2022e244278891cd57e47}\index{Vigenere@{Vigenere}!Vigenere@{Vigenere}}
+\index{Vigenere@{Vigenere}!Vigenere@{Vigenere}}
+\doxysubsubsection{\texorpdfstring{Vigenere()}{Vigenere()}}
+{\footnotesize\ttfamily \label{class_vigenere_aa47ebd6550a2022e244278891cd57e47} 
+Vigenere\+::\+Vigenere (\begin{DoxyParamCaption}\item[{std\+::string}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Constructor that sets the current vigenere key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & a std\+::string that becomes the current key to be used by the cipher \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vigenere_a7b87aaf211ce478d05e262928db65cfc}\index{Vigenere@{Vigenere}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!Vigenere@{Vigenere}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily \label{class_vigenere_a7b87aaf211ce478d05e262928db65cfc} 
+std\+::string Vigenere\+::decrypt (\begin{DoxyParamCaption}\item[{std\+::string}]{msg}{}\end{DoxyParamCaption})}
+
+
+
+Returns a given message decrypted by a vigenere cipher using the current key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & a std\+::string that will be decrypted using a vigenere cipher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The decrypted version of the initial message using the set key 
+\end{DoxyReturn}
+\Hypertarget{class_vigenere_af4c61150d58a7cf06c3e32e861f3f10f}\index{Vigenere@{Vigenere}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!Vigenere@{Vigenere}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily \label{class_vigenere_af4c61150d58a7cf06c3e32e861f3f10f} 
+std\+::string Vigenere\+::encrypt (\begin{DoxyParamCaption}\item[{std\+::string}]{msg}{}\end{DoxyParamCaption})}
+
+
+
+Returns a given message encrypted by a vigenere cipher using the current key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & a std\+::string that will be encrypted using a vigenere cipher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The encrypted version of the initial message using the set key 
+\end{DoxyReturn}
+\Hypertarget{class_vigenere_a25f202a6e81315673ac4d75e3bf44b79}\index{Vigenere@{Vigenere}!isEncrypted@{isEncrypted}}
+\index{isEncrypted@{isEncrypted}!Vigenere@{Vigenere}}
+\doxysubsubsection{\texorpdfstring{isEncrypted()}{isEncrypted()}}
+{\footnotesize\ttfamily \label{class_vigenere_a25f202a6e81315673ac4d75e3bf44b79} 
+bool Vigenere\+::is\+Encrypted (\begin{DoxyParamCaption}\item[{std\+::string}]{encrypted\+Msg}{, }\item[{std\+::string}]{decrypted\+Message}{}\end{DoxyParamCaption})}
+
+
+
+Returns a bool that checks if a given encrypted message and decrypted message are the same message after encryption/decryption. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em encrypted\+Msg} & a message that has already been encrypted using a vigenere cipher by a key \\
+\hline
+{\em decrypted\+Message} & a message that has already been decrypted using a vigenere cipher by a key/is the unencrypted message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A bool that is either a 1 or 0 depending on if the two messages are a pair using the same key 
+\end{DoxyReturn}
+\Hypertarget{class_vigenere_a56fc304a543d347924432c61bc9780a1}\index{Vigenere@{Vigenere}!setKey@{setKey}}
+\index{setKey@{setKey}!Vigenere@{Vigenere}}
+\doxysubsubsection{\texorpdfstring{setKey()}{setKey()}}
+{\footnotesize\ttfamily \label{class_vigenere_a56fc304a543d347924432c61bc9780a1} 
+void Vigenere\+::set\+Key (\begin{DoxyParamCaption}\item[{std\+::string}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Changes the current key used by the vigenere encryption and decryption. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & a new key to be replace the currently set key \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+vigenere.\+h\item 
+vigenere.\+cpp\end{DoxyCompactItemize}

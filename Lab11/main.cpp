@@ -8,6 +8,7 @@ int main(){
   std::cout << cipher.isEncrypted("YSZOCFKL", "CS IS COOL") << "\n";
   cipher.setKey("PEANUTBUTTER");
   std::cout << cipher.encrypt("CS IS COOL") << "\n";
+  std::cout << cipher.decrypt("RWIFWHPF") << "\n";
   std::cout << cipher.isEncrypted("YSZOCFKL", "CS IS COOL") << "\n";
   
   
