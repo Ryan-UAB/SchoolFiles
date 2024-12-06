@@ -1,30 +1,118 @@
 \doxysection{Hamming Class Reference}
 \hypertarget{class_hamming}{}\label{class_hamming}\index{Hamming@{Hamming}}
+
+
+A \doxylink{class_hamming}{Hamming} Code (7,4) class that can both decode and encode.  
+
+
+
+
+{\ttfamily \#include $<$hamming.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_hamming_aa7cb56f8c80e21bf739763785bc04942}\label{class_hamming_aa7cb56f8c80e21bf739763785bc04942} 
-{\bfseries Hamming} (std\+::string filename)
-\item 
-\Hypertarget{class_hamming_af4fd912340ed17bacf7f24dce24b1249}\label{class_hamming_af4fd912340ed17bacf7f24dce24b1249} 
-void {\bfseries encode} ()
-\item 
-\Hypertarget{class_hamming_ab8aabf72caa0effcfb9cf4095ebc9a82}\label{class_hamming_ab8aabf72caa0effcfb9cf4095ebc9a82} 
-void {\bfseries decode} ()
-\item 
-\Hypertarget{class_hamming_af924517e3bbbe6144328480d576d097f}\label{class_hamming_af924517e3bbbe6144328480d576d097f} 
-std\+::string {\bfseries show\+Encoded} ()
-\item 
-\Hypertarget{class_hamming_a116aab4d9e783f7c3798aa31ab38d15f}\label{class_hamming_a116aab4d9e783f7c3798aa31ab38d15f} 
-std\+::string {\bfseries show\+Decoded} ()
-\item 
-\Hypertarget{class_hamming_a83042f02cbe1146a98c3742272cf6729}\label{class_hamming_a83042f02cbe1146a98c3742272cf6729} 
-std\+::string {\bfseries show\+Original} ()
-\item 
-\Hypertarget{class_hamming_a578b1cd70b749807518b3cf015b261e8}\label{class_hamming_a578b1cd70b749807518b3cf015b261e8} 
-void {\bfseries clear} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_hamming_aa7cb56f8c80e21bf739763785bc04942}{Hamming}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Constructor that sets the current filename. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hamming_af4fd912340ed17bacf7f24dce24b1249}{encode}} ()
+\begin{DoxyCompactList}\small\item\em Encodes current 4-\/bit codes into 7-\/bit codes with parity bits. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hamming_ab8aabf72caa0effcfb9cf4095ebc9a82}{decode}} ()
+\begin{DoxyCompactList}\small\item\em Decodes current 7-\/bit codes into their 7-\/bit counterparts with no errors. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_hamming_af924517e3bbbe6144328480d576d097f}{show\+Encoded}} ()
+\begin{DoxyCompactList}\small\item\em Returns the encoded version of intially encoded 4-\/bit codes. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_hamming_a116aab4d9e783f7c3798aa31ab38d15f}{show\+Decoded}} ()
+\begin{DoxyCompactList}\small\item\em Returns the decoded version of intial 7-\/bit codes with errors fixed. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_hamming_a83042f02cbe1146a98c3742272cf6729}{show\+Original}} ()
+\begin{DoxyCompactList}\small\item\em Returns the initial version of the codes as they were put into the class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hamming_a578b1cd70b749807518b3cf015b261e8}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears the decoded and encoded vectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A \doxylink{class_hamming}{Hamming} Code (7,4) class that can both decode and encode. 
+
+This class takes a filename in its constructor where the file is a list of \doxylink{class_hamming}{Hamming} Codes for every line to be either decoded or encoded. If the given \doxylink{class_hamming}{Hamming} Code has an error, then it will be corrected. The \doxylink{class_hamming}{Hamming} Code pattern followed is d1d2d3d4p1p2p3. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_hamming_aa7cb56f8c80e21bf739763785bc04942}\index{Hamming@{Hamming}!Hamming@{Hamming}}
+\index{Hamming@{Hamming}!Hamming@{Hamming}}
+\doxysubsubsection{\texorpdfstring{Hamming()}{Hamming()}}
+{\footnotesize\ttfamily \label{class_hamming_aa7cb56f8c80e21bf739763785bc04942} 
+Hamming\+::\+Hamming (\begin{DoxyParamCaption}\item[{std\+::string}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Constructor that sets the current filename. 
+
+This constructor takes a std\+::string that will be used to open a file with that name that contains the \doxylink{class_hamming}{Hamming} Codes needed. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & a std\+::string to set the filename \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_hamming_a578b1cd70b749807518b3cf015b261e8}\index{Hamming@{Hamming}!clear@{clear}}
+\index{clear@{clear}!Hamming@{Hamming}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{class_hamming_a578b1cd70b749807518b3cf015b261e8} 
+void Hamming\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Clears the decoded and encoded vectors. 
+
+This function will clear both the decoded and encoded vectors so that more codes can be decoded/encoded. \Hypertarget{class_hamming_ab8aabf72caa0effcfb9cf4095ebc9a82}\index{Hamming@{Hamming}!decode@{decode}}
+\index{decode@{decode}!Hamming@{Hamming}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
+{\footnotesize\ttfamily \label{class_hamming_ab8aabf72caa0effcfb9cf4095ebc9a82} 
+void Hamming\+::decode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Decodes current 7-\/bit codes into their 7-\/bit counterparts with no errors. 
+
+This function will check the current 7-\/bit codes in order to see if there are any errors. If any errors are detected, then the errors are fixed. \Hypertarget{class_hamming_af4fd912340ed17bacf7f24dce24b1249}\index{Hamming@{Hamming}!encode@{encode}}
+\index{encode@{encode}!Hamming@{Hamming}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}}
+{\footnotesize\ttfamily \label{class_hamming_af4fd912340ed17bacf7f24dce24b1249} 
+void Hamming\+::encode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Encodes current 4-\/bit codes into 7-\/bit codes with parity bits. 
+
+This function will encode given 4-\/bit codes into the 7-\/bit codes with the 3 additional parity bits being added at the end of the initial 4-\/bits. \Hypertarget{class_hamming_a116aab4d9e783f7c3798aa31ab38d15f}\index{Hamming@{Hamming}!showDecoded@{showDecoded}}
+\index{showDecoded@{showDecoded}!Hamming@{Hamming}}
+\doxysubsubsection{\texorpdfstring{showDecoded()}{showDecoded()}}
+{\footnotesize\ttfamily \label{class_hamming_a116aab4d9e783f7c3798aa31ab38d15f} 
+std\+::string Hamming\+::show\+Decoded (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the decoded version of intial 7-\/bit codes with errors fixed. 
+
+This function will return a std\+::string containing all of newly decoded 7-\/bit codes that have had any of their one bit errors fixed. \Hypertarget{class_hamming_af924517e3bbbe6144328480d576d097f}\index{Hamming@{Hamming}!showEncoded@{showEncoded}}
+\index{showEncoded@{showEncoded}!Hamming@{Hamming}}
+\doxysubsubsection{\texorpdfstring{showEncoded()}{showEncoded()}}
+{\footnotesize\ttfamily \label{class_hamming_af924517e3bbbe6144328480d576d097f} 
+std\+::string Hamming\+::show\+Encoded (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the encoded version of intially encoded 4-\/bit codes. 
+
+This function will return a std\+::string containing all of the newly encoded codes created via the \doxylink{class_hamming_af4fd912340ed17bacf7f24dce24b1249}{encode()} function. If encode has not been ran then this will return an empty string. \Hypertarget{class_hamming_a83042f02cbe1146a98c3742272cf6729}\index{Hamming@{Hamming}!showOriginal@{showOriginal}}
+\index{showOriginal@{showOriginal}!Hamming@{Hamming}}
+\doxysubsubsection{\texorpdfstring{showOriginal()}{showOriginal()}}
+{\footnotesize\ttfamily \label{class_hamming_a83042f02cbe1146a98c3742272cf6729} 
+std\+::string Hamming\+::show\+Original (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the initial version of the codes as they were put into the class. 
+
+This function will return a std\+::string containing all of the original codes as they were put into the class. Useful for comparing against the encoded or decoded versions. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

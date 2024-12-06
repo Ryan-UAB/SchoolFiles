@@ -4,6 +4,8 @@
 #include <vector>
 #include <bitset>
 
+Hamming::Hamming(){}
+
 Hamming::Hamming(std::string filename){
   std::ifstream currentfile(filename);
   std::string line;

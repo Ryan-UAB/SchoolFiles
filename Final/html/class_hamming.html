@@ -91,31 +91,186 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">Hamming Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A <a class="el" href="class_hamming.html" title="A Hamming Code (7,4) class that can both decode and encode.">Hamming</a> Code (7,4) class that can both decode and encode.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="hamming_8h_source.html">hamming.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa7cb56f8c80e21bf739763785bc04942" id="r_aa7cb56f8c80e21bf739763785bc04942"><td class="memItemLeft" align="right" valign="top"><a id="aa7cb56f8c80e21bf739763785bc04942" name="aa7cb56f8c80e21bf739763785bc04942"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Hamming</b> (std::string filename)</td></tr>
+<tr class="memitem:aa7cb56f8c80e21bf739763785bc04942" id="r_aa7cb56f8c80e21bf739763785bc04942"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7cb56f8c80e21bf739763785bc04942">Hamming</a> (std::string filename)</td></tr>
+<tr class="memdesc:aa7cb56f8c80e21bf739763785bc04942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that sets the current filename.  <br /></td></tr>
 <tr class="separator:aa7cb56f8c80e21bf739763785bc04942"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4fd912340ed17bacf7f24dce24b1249" id="r_af4fd912340ed17bacf7f24dce24b1249"><td class="memItemLeft" align="right" valign="top"><a id="af4fd912340ed17bacf7f24dce24b1249" name="af4fd912340ed17bacf7f24dce24b1249"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>encode</b> ()</td></tr>
+<tr class="memitem:af4fd912340ed17bacf7f24dce24b1249" id="r_af4fd912340ed17bacf7f24dce24b1249"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4fd912340ed17bacf7f24dce24b1249">encode</a> ()</td></tr>
+<tr class="memdesc:af4fd912340ed17bacf7f24dce24b1249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encodes current 4-bit codes into 7-bit codes with parity bits.  <br /></td></tr>
 <tr class="separator:af4fd912340ed17bacf7f24dce24b1249"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8aabf72caa0effcfb9cf4095ebc9a82" id="r_ab8aabf72caa0effcfb9cf4095ebc9a82"><td class="memItemLeft" align="right" valign="top"><a id="ab8aabf72caa0effcfb9cf4095ebc9a82" name="ab8aabf72caa0effcfb9cf4095ebc9a82"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>decode</b> ()</td></tr>
+<tr class="memitem:ab8aabf72caa0effcfb9cf4095ebc9a82" id="r_ab8aabf72caa0effcfb9cf4095ebc9a82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8aabf72caa0effcfb9cf4095ebc9a82">decode</a> ()</td></tr>
+<tr class="memdesc:ab8aabf72caa0effcfb9cf4095ebc9a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes current 7-bit codes into their 7-bit counterparts with no errors.  <br /></td></tr>
 <tr class="separator:ab8aabf72caa0effcfb9cf4095ebc9a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af924517e3bbbe6144328480d576d097f" id="r_af924517e3bbbe6144328480d576d097f"><td class="memItemLeft" align="right" valign="top"><a id="af924517e3bbbe6144328480d576d097f" name="af924517e3bbbe6144328480d576d097f"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>showEncoded</b> ()</td></tr>
+<tr class="memitem:af924517e3bbbe6144328480d576d097f" id="r_af924517e3bbbe6144328480d576d097f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af924517e3bbbe6144328480d576d097f">showEncoded</a> ()</td></tr>
+<tr class="memdesc:af924517e3bbbe6144328480d576d097f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the encoded version of intially encoded 4-bit codes.  <br /></td></tr>
 <tr class="separator:af924517e3bbbe6144328480d576d097f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a116aab4d9e783f7c3798aa31ab38d15f" id="r_a116aab4d9e783f7c3798aa31ab38d15f"><td class="memItemLeft" align="right" valign="top"><a id="a116aab4d9e783f7c3798aa31ab38d15f" name="a116aab4d9e783f7c3798aa31ab38d15f"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>showDecoded</b> ()</td></tr>
+<tr class="memitem:a116aab4d9e783f7c3798aa31ab38d15f" id="r_a116aab4d9e783f7c3798aa31ab38d15f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a116aab4d9e783f7c3798aa31ab38d15f">showDecoded</a> ()</td></tr>
+<tr class="memdesc:a116aab4d9e783f7c3798aa31ab38d15f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the decoded version of intial 7-bit codes with errors fixed.  <br /></td></tr>
 <tr class="separator:a116aab4d9e783f7c3798aa31ab38d15f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83042f02cbe1146a98c3742272cf6729" id="r_a83042f02cbe1146a98c3742272cf6729"><td class="memItemLeft" align="right" valign="top"><a id="a83042f02cbe1146a98c3742272cf6729" name="a83042f02cbe1146a98c3742272cf6729"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>showOriginal</b> ()</td></tr>
+<tr class="memitem:a83042f02cbe1146a98c3742272cf6729" id="r_a83042f02cbe1146a98c3742272cf6729"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83042f02cbe1146a98c3742272cf6729">showOriginal</a> ()</td></tr>
+<tr class="memdesc:a83042f02cbe1146a98c3742272cf6729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the initial version of the codes as they were put into the class.  <br /></td></tr>
 <tr class="separator:a83042f02cbe1146a98c3742272cf6729"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a578b1cd70b749807518b3cf015b261e8" id="r_a578b1cd70b749807518b3cf015b261e8"><td class="memItemLeft" align="right" valign="top"><a id="a578b1cd70b749807518b3cf015b261e8" name="a578b1cd70b749807518b3cf015b261e8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+<tr class="memitem:a578b1cd70b749807518b3cf015b261e8" id="r_a578b1cd70b749807518b3cf015b261e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a578b1cd70b749807518b3cf015b261e8">clear</a> ()</td></tr>
+<tr class="memdesc:a578b1cd70b749807518b3cf015b261e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the decoded and encoded vectors.  <br /></td></tr>
 <tr class="separator:a578b1cd70b749807518b3cf015b261e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A <a class="el" href="class_hamming.html" title="A Hamming Code (7,4) class that can both decode and encode.">Hamming</a> Code (7,4) class that can both decode and encode. </p>
+<p>This class takes a filename in its constructor where the file is a list of <a class="el" href="class_hamming.html" title="A Hamming Code (7,4) class that can both decode and encode.">Hamming</a> Codes for every line to be either decoded or encoded. If the given <a class="el" href="class_hamming.html" title="A Hamming Code (7,4) class that can both decode and encode.">Hamming</a> Code has an error, then it will be corrected. The <a class="el" href="class_hamming.html" title="A Hamming Code (7,4) class that can both decode and encode.">Hamming</a> Code pattern followed is d1d2d3d4p1p2p3. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa7cb56f8c80e21bf739763785bc04942" name="aa7cb56f8c80e21bf739763785bc04942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7cb56f8c80e21bf739763785bc04942">&#9670;&#160;</a></span>Hamming()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Hamming::Hamming </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor that sets the current filename. </p>
+<p>This constructor takes a std::string that will be used to open a file with that name that contains the <a class="el" href="class_hamming.html" title="A Hamming Code (7,4) class that can both decode and encode.">Hamming</a> Codes needed. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>a std::string to set the filename </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a578b1cd70b749807518b3cf015b261e8" name="a578b1cd70b749807518b3cf015b261e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a578b1cd70b749807518b3cf015b261e8">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Hamming::clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears the decoded and encoded vectors. </p>
+<p>This function will clear both the decoded and encoded vectors so that more codes can be decoded/encoded. </p>
+
+</div>
+</div>
+<a id="ab8aabf72caa0effcfb9cf4095ebc9a82" name="ab8aabf72caa0effcfb9cf4095ebc9a82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8aabf72caa0effcfb9cf4095ebc9a82">&#9670;&#160;</a></span>decode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Hamming::decode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decodes current 7-bit codes into their 7-bit counterparts with no errors. </p>
+<p>This function will check the current 7-bit codes in order to see if there are any errors. If any errors are detected, then the errors are fixed. </p>
+
+</div>
+</div>
+<a id="af4fd912340ed17bacf7f24dce24b1249" name="af4fd912340ed17bacf7f24dce24b1249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4fd912340ed17bacf7f24dce24b1249">&#9670;&#160;</a></span>encode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Hamming::encode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Encodes current 4-bit codes into 7-bit codes with parity bits. </p>
+<p>This function will encode given 4-bit codes into the 7-bit codes with the 3 additional parity bits being added at the end of the initial 4-bits. </p>
+
+</div>
+</div>
+<a id="a116aab4d9e783f7c3798aa31ab38d15f" name="a116aab4d9e783f7c3798aa31ab38d15f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a116aab4d9e783f7c3798aa31ab38d15f">&#9670;&#160;</a></span>showDecoded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Hamming::showDecoded </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the decoded version of intial 7-bit codes with errors fixed. </p>
+<p>This function will return a std::string containing all of newly decoded 7-bit codes that have had any of their one bit errors fixed. </p>
+
+</div>
+</div>
+<a id="af924517e3bbbe6144328480d576d097f" name="af924517e3bbbe6144328480d576d097f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af924517e3bbbe6144328480d576d097f">&#9670;&#160;</a></span>showEncoded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Hamming::showEncoded </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the encoded version of intially encoded 4-bit codes. </p>
+<p>This function will return a std::string containing all of the newly encoded codes created via the <a class="el" href="#af4fd912340ed17bacf7f24dce24b1249" title="Encodes current 4-bit codes into 7-bit codes with parity bits.">encode()</a> function. If encode has not been ran then this will return an empty string. </p>
+
+</div>
+</div>
+<a id="a83042f02cbe1146a98c3742272cf6729" name="a83042f02cbe1146a98c3742272cf6729"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83042f02cbe1146a98c3742272cf6729">&#9670;&#160;</a></span>showOriginal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Hamming::showOriginal </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the initial version of the codes as they were put into the class. </p>
+<p>This function will return a std::string containing all of the original codes as they were put into the class. Useful for comparing against the encoded or decoded versions. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="hamming_8h_source.html">hamming.h</a></li>
 <li><b>hamming.cpp</b></li>
