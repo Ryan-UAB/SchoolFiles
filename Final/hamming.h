@@ -30,14 +30,17 @@ class Hamming{
   void decode();
   //! Returns the encoded version of intially encoded 4-bit codes.
   /*!This function will return a std::string containing all of the newly encoded codes created via the encode() function. If encode has not been ran then this will return an empty string.
+    @return A string that displays new Hamming codes
    */
   std::string showEncoded();
   //! Returns the decoded version of intial 7-bit codes with errors fixed.
   /*!This function will return a std::string containing all of newly decoded 7-bit codes that have had any of their one bit errors fixed.
+    @return A string that displays fixed Hamming codes
    */
   std::string showDecoded();
   //! Returns the initial version of the codes as they were put into the class.
   /*!This function will return a std::string containing all of the original codes as they were put into the class. Useful for comparing against the encoded or decoded versions.
+    @return A string that displays the original codes
    */
   std::string showOriginal();
   //! Clears the decoded and encoded vectors
