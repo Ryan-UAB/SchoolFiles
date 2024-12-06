@@ -1,0 +1,6 @@
+a. I worked on this project alone so I contributed everything.
+b. N/A
+c. My biggest takeaway from this course, is just how transferable the skills of other programming languages are. Despite having never used c++ before this class, everything felt easy to pick up. I believe this will be the same way for any future languages I may want to learn, and I believe the skills from c++ will be just as transferable.
+d. Personally, I had no major complaints about this course and have nothing I think I would change.
+
+Bonus. I used the linter cppcheck as it was easy to install on Mac using brew and could easily check code in the terminal. I used this linter in the same way I would typically on vscode, I decided to code this project in emacs so this would matter, in that I would use cppcheck to do an exhaustive level check to ensure that the code had no major errors before compiling it. It was a bit more tedious this way, but it did ensure that I never encountered an error during compile.
